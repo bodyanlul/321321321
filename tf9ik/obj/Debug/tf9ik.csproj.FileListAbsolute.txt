@@ -9,3 +9,12 @@ C:\Users\User.DESKTOP-Q2FT676\source\repos\tf9ik\obj\Debug\tf9ik.exe
 C:\Users\User.DESKTOP-Q2FT676\source\repos\tf9ik\obj\Debug\tf9ik.pdb
 C:\Users\User.DESKTOP-Q2FT676\source\repos\tf9ik\obj\Debug\tf9ik.Form1.resources
 C:\Users\User.DESKTOP-Q2FT676\source\repos\tf9ik\obj\Debug\tf9ik.Form2.resources
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.csprojAssemblyReference.cache
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.Form1.resources
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.Properties.Resources.resources
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.csproj.GenerateResource.cache
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.exe
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.pdb
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\bin\Debug\tf9ik.exe.config
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\bin\Debug\tf9ik.exe
+C:\Users\bodyanbI4\Desktop\321321321-main\tf9ik\bin\Debug\tf9ik.pdb
