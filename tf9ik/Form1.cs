@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
+
 namespace tf9ik
 {
     public partial class Form1 : Form
@@ -26,6 +28,10 @@ namespace tf9ik
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         }
 
+        private void ValidateEmail()
+        {
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+        }
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -299,7 +305,17 @@ namespace tf9ik
 
         private void ВызовСправкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("C:\\Users\\User.DESKTOP-Q2FT676\\source\\repos\\tf9ik\\chm.chm");
+            Process.Start("C:\\Users\\User.DESKTOP-Q2FT676\\Desktop\\321321321-main\\tf9ik\\chm.chm");
+        }
+
+        private void Valid_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            RichTextBox box = (RichTextBox)tabControl1.TabPages[tabControl1.SelectedIndex].Controls["textEnter"];
         }
     }
 }

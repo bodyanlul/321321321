@@ -8,12 +8,36 @@
  </OBJECT>
 <UL>
  <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Dstrok;Т&Ntilde;Л&Dstrok;&acute;&Dstrok;&micro;&Dstrok;&raquo;&Dstrok;&cedil;&Ntilde;В&Ntilde;М &Dstrok;&sup2;&Ntilde;Б&Dstrok;&micro;">
+  <PARAM name="Local" value="ѕравка/¬ыделить все.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
   <PARAM name="Name" value="&Dstrok;Т&Ntilde;Л&Ntilde;Е&Dstrok;&frac34;&Dstrok;&acute;">
   <PARAM name="Local" value="‘айл/¬ыход.html">
  </OBJECT>
  <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Dstrok;Т&Ntilde;Л&Ntilde;А&Dstrok;&micro;&Dstrok;&middot;&Dstrok;&deg;&Ntilde;В&Ntilde;М">
+  <PARAM name="Local" value="ѕравка/¬ырезать.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Dstrok;Т&Ntilde;Б&Ntilde;В&Dstrok;&deg;&Dstrok;&sup2;&Dstrok;&cedil;&Ntilde;В&Ntilde;М">
+  <PARAM name="Local" value="ѕравка/¬ставить.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Dstrok;&pound;&Dstrok;&acute;&Dstrok;&deg;&Dstrok;&raquo;&Dstrok;&cedil;&Ntilde;В&Ntilde;М">
+  <PARAM name="Local" value="ѕравка/”далить.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Dstrok;Ъ&Dstrok;&frac34;&Dstrok;&iquest;&Dstrok;&cedil;&Ntilde;А&Dstrok;&frac34;&Dstrok;&sup2;&Dstrok;&deg;&Ntilde;В&Ntilde;М">
+  <PARAM name="Local" value="ѕравка/ опировать.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
   <PARAM name="Name" value="&Dstrok;Ю&Ntilde;В&Dstrok;&ordm;&Ntilde;А&Ntilde;Л&Ntilde;В&Ntilde;М">
   <PARAM name="Local" value="‘айл/ќткрыть.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Dstrok;Ю&Ntilde;В&Dstrok;&frac14;&Dstrok;&micro;&Dstrok;&frac12;&Dstrok;&cedil;&Ntilde;В&Ntilde;М">
+  <PARAM name="Local" value="ѕравка/ќтменить.html">
  </OBJECT>
  <LI><OBJECT type="text/sitemap">
   <PARAM name="Name" value="&Dstrok;&iexcl;&Dstrok;&frac34;&Dstrok;&middot;&Dstrok;&acute;&Dstrok;&deg;&Ntilde;В&Ntilde;М">
@@ -26,6 +50,14 @@
  <LI><OBJECT type="text/sitemap">
   <PARAM name="Name" value="&Dstrok;&iexcl;&Dstrok;&frac34;&Ntilde;Е&Ntilde;А&Dstrok;&deg;&Dstrok;&frac12;&Dstrok;&cedil;&Ntilde;В&Ntilde;М &Dstrok;&ordm;&Dstrok;&deg;&Dstrok;&ordm;">
   <PARAM name="Local" value="‘айл/—охранить как.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Dstrok;Я&Dstrok;&frac34;&Dstrok;&sup2;&Ntilde;В&Dstrok;&frac34;&Ntilde;А&Dstrok;&cedil;&Ntilde;В&Ntilde;М">
+  <PARAM name="Local" value="ѕравка/ѕовторить.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Dstrok;Я&Ntilde;Г&Ntilde;Б&Dstrok;&ordm;">
+  <PARAM name="Local" value="ѕуск.html">
  </OBJECT>
 </UL>
 </BODY>

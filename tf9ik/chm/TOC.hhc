@@ -32,5 +32,43 @@
   <PARAM name="Name" value="&Acirc;&ucirc;&otilde;&icirc;&auml;">
   <PARAM name="Local" value="Файл/Выход.html">
  </OBJECT>
+</UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Iuml;&eth;&agrave;&acirc;&ecirc;&agrave;">
+ </OBJECT>
+<UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Icirc;&ograve;&igrave;&aring;&iacute;&egrave;&ograve;&uuml;">
+  <PARAM name="Local" value="Правка/Отменить.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Iuml;&icirc;&acirc;&ograve;&icirc;&eth;&egrave;&ograve;&uuml;">
+  <PARAM name="Local" value="Правка/Повторить.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Acirc;&ucirc;&eth;&aring;&ccedil;&agrave;&ograve;&uuml;">
+  <PARAM name="Local" value="Правка/Вырезать.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Ecirc;&icirc;&iuml;&egrave;&eth;&icirc;&acirc;&agrave;&ograve;&uuml;">
+  <PARAM name="Local" value="Правка/Копировать.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Acirc;&ntilde;&ograve;&agrave;&acirc;&egrave;&ograve;&uuml;">
+  <PARAM name="Local" value="Правка/Вставить.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Oacute;&auml;&agrave;&euml;&egrave;&ograve;&uuml;">
+  <PARAM name="Local" value="Правка/Удалить.html">
+ </OBJECT>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Acirc;&ucirc;&auml;&aring;&euml;&egrave;&ograve;&uuml; &acirc;&ntilde;&cedil;">
+  <PARAM name="Local" value="Правка/Выделить все.html">
+ </OBJECT>
+</UL>
+ <LI><OBJECT type="text/sitemap">
+  <PARAM name="Name" value="&Iuml;&oacute;&ntilde;&ecirc;">
+  <PARAM name="Local" value="Пуск.html">
+ </OBJECT>
 </BODY>
 </HTML>
