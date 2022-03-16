@@ -316,6 +316,35 @@ namespace tf9ik
             }
 
             RichTextBox box = (RichTextBox)tabControl1.TabPages[tabControl1.SelectedIndex].Controls["textEnter"];
+            box.Enabled = false;
+            string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+            int count = 0;
+
+            this.ResultWindow.Text = "Найденные email:\n";
+
+            string[] text = box.Lines;
+
+            for (int i = 0; i < text.Length; ++i)
+            {
+                Regex regex = new Regex(pattern);
+                MatchCollection matchColl = regex.Matches(text[i]);
+
+                foreach (Match match in matchColl)
+                {
+                    ++count;
+                    this.ResultWindow.Text += count + ". " + match.Value;
+                    this.ResultWindow.Text += " Строка: " + (i + 1);
+                    this.ResultWindow.Text += " Позиция в строке: " + (match.Index + 1);
+                    this.ResultWindow.Text += "\n";
+                }
+
+            }
+            if (count == 0)
+            {
+                this.ResultWindow.Text += "Не найдено";
+            }
+            box.Select(0, 0);
+            box.Enabled = true;
         }
     }
 }
