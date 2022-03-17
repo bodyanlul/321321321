@@ -16,18 +16,18 @@ namespace tf9ik
         //ABTOP IGOREK//
         private static readonly Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 
-        public static RegexRes[] FindAll(string text)
-        {
-            var matches = regex.Matches(text);
-            List <RegexRes> toReturn= new List<RegexRes>();
-            foreach (Match i in matches)
-            {
-                RegexRes res = new RegexRes(i.Index, i.Length, i.Value);
+        //public static RegexRes[] FindAll(string text)
+        //{
+        //    var matches = regex.Matches(text);
+        //    List <RegexRes> toReturn= new List<RegexRes>();
+        //    foreach (Match i in matches)
+        //    {
+        //        RegexRes res = new RegexRes(i.Index, i.Length, i.Value);
                 
-                toReturn += 
-            }
+        //        toReturn += 
+        //    }
             
-        }
+        //}
 
 
         public class RegexRes

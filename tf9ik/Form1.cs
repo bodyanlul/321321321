@@ -28,10 +28,6 @@ namespace tf9ik
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         }
 
-        private void ValidateEmail()
-        {
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-        }
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -317,26 +313,31 @@ namespace tf9ik
 
             RichTextBox box = (RichTextBox)tabControl1.TabPages[tabControl1.SelectedIndex].Controls["textEnter"];
             box.Enabled = false;
-            string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+            string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,4})+)$";
+            char[] separators = new char[] { ' ', ',', ':', ';', '?', '/', '!'};
             int count = 0;
 
             this.ResultWindow.Text = "Найденные email:\n";
-
             string[] text = box.Lines;
 
             for (int i = 0; i < text.Length; ++i)
             {
-                Regex regex = new Regex(pattern);
-                MatchCollection matchColl = regex.Matches(text[i]);
-
-                foreach (Match match in matchColl)
+                //MatchCollection matchColl=null;
+                Regex regex = new Regex(pattern, RegexOptions.Singleline);
+                var splitedString = text[i].Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                for (int j = 0; j < splitedString.Length; j++)
                 {
-                    ++count;
-                    this.ResultWindow.Text += count + ". " + match.Value;
-                    this.ResultWindow.Text += " Строка: " + (i + 1);
-                    this.ResultWindow.Text += " Позиция в строке: " + (match.Index + 1);
-                    this.ResultWindow.Text += "\n";
+                    MatchCollection matchColl = regex.Matches(splitedString[j]);
+                    foreach (Match match in matchColl)
+                    {
+                        ++count;
+                        this.ResultWindow.Text += count + ". " + match.Value;
+                        this.ResultWindow.Text += " Строка: " + (i + 1);
+                        this.ResultWindow.Text += "\n";
+                    }
                 }
+                
+               
 
             }
             if (count == 0)
