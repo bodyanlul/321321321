@@ -69,6 +69,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Valid = new System.Windows.Forms.Button();
+            this.automat = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -334,7 +335,7 @@
             // 
             // UndoBtn
             // 
-            this.UndoBtn.Location = new System.Drawing.Point(407, 44);
+            this.UndoBtn.Location = new System.Drawing.Point(339, 44);
             this.UndoBtn.Margin = new System.Windows.Forms.Padding(4);
             this.UndoBtn.Name = "UndoBtn";
             this.UndoBtn.Size = new System.Drawing.Size(80, 74);
@@ -345,7 +346,7 @@
             // 
             // ReturnBtn
             // 
-            this.ReturnBtn.Location = new System.Drawing.Point(495, 44);
+            this.ReturnBtn.Location = new System.Drawing.Point(427, 44);
             this.ReturnBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(80, 74);
@@ -356,7 +357,7 @@
             // 
             // CopyBtn
             // 
-            this.CopyBtn.Location = new System.Drawing.Point(583, 44);
+            this.CopyBtn.Location = new System.Drawing.Point(515, 44);
             this.CopyBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CopyBtn.Name = "CopyBtn";
             this.CopyBtn.Size = new System.Drawing.Size(80, 74);
@@ -367,7 +368,7 @@
             // 
             // CutBtn
             // 
-            this.CutBtn.Location = new System.Drawing.Point(671, 44);
+            this.CutBtn.Location = new System.Drawing.Point(603, 44);
             this.CutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CutBtn.Name = "CutBtn";
             this.CutBtn.Size = new System.Drawing.Size(80, 74);
@@ -378,7 +379,7 @@
             // 
             // PasteBtn
             // 
-            this.PasteBtn.Location = new System.Drawing.Point(759, 44);
+            this.PasteBtn.Location = new System.Drawing.Point(691, 44);
             this.PasteBtn.Margin = new System.Windows.Forms.Padding(4);
             this.PasteBtn.Name = "PasteBtn";
             this.PasteBtn.Size = new System.Drawing.Size(80, 74);
@@ -403,7 +404,7 @@
             // 
             // Valid
             // 
-            this.Valid.Location = new System.Drawing.Point(847, 44);
+            this.Valid.Location = new System.Drawing.Point(779, 44);
             this.Valid.Margin = new System.Windows.Forms.Padding(4);
             this.Valid.Name = "Valid";
             this.Valid.Size = new System.Drawing.Size(80, 74);
@@ -412,10 +413,21 @@
             this.Valid.UseVisualStyleBackColor = true;
             this.Valid.Click += new System.EventHandler(this.Valid_Click);
             // 
+            // automat
+            // 
+            this.automat.Location = new System.Drawing.Point(867, 44);
+            this.automat.Name = "automat";
+            this.automat.Size = new System.Drawing.Size(75, 74);
+            this.automat.TabIndex = 13;
+            this.automat.Text = "Автомат";
+            this.automat.UseVisualStyleBackColor = true;
+            this.automat.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1005, 715);
+            this.Controls.Add(this.automat);
             this.Controls.Add(this.Valid);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.PasteBtn);
@@ -484,6 +496,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button Valid;
+        private System.Windows.Forms.Button automat;
     }
 }
 

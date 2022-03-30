@@ -347,5 +347,41 @@ namespace tf9ik
             box.Select(0, 0);
             box.Enabled = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == -1)
+            {
+                return;
+            }
+            RichTextBox box = (RichTextBox)tabControl1.TabPages[tabControl1.SelectedIndex].Controls["textEnter"];
+            box.Enabled = false;
+            Automat auto = new Automat();
+            char[] separators = new char[] { ' ', ',', ':', ';', '?', '/', '!' };
+            this.ResultWindow.Text = "Найденные email:\n";
+            string[] text = box.Lines;
+            int count = 0;
+            for (int i = 0; i < text.Length; ++i)
+            {
+                var splitedString = text[i].Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                for (int j = 0; j < splitedString.Length; j++)
+                {
+                    var matches = new List<string>();
+                    if(auto.checkEmail(splitedString[j]))
+                    matches.Add(splitedString[j]);
+                    foreach (var match in matches)
+                    {
+                        ++count;
+                        this.ResultWindow.Text += count + ". " + match;
+                        this.ResultWindow.Text += " Строка: " + (i + 1);
+                        this.ResultWindow.Text += "\n";
+                    }
+                }
+
+
+
+            }
+
+        }
     }
 }
