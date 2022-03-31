@@ -68,8 +68,11 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Valid = new System.Windows.Forms.Button();
-            this.automat = new System.Windows.Forms.Button();
+            this.сканерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.лРToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.рВToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.автоматToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.лексическийАнализаторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +83,8 @@
             this.файлToolStripMenuItem,
             this.правкаToolStripMenuItem,
             this.текстToolStripMenuItem,
+            this.сканерToolStripMenuItem,
+            this.лРToolStripMenuItem,
             this.пускToolStripMenuItem,
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -402,33 +407,48 @@
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDoubleClick);
             // 
-            // Valid
+            // сканерToolStripMenuItem
             // 
-            this.Valid.Location = new System.Drawing.Point(779, 44);
-            this.Valid.Margin = new System.Windows.Forms.Padding(4);
-            this.Valid.Name = "Valid";
-            this.Valid.Size = new System.Drawing.Size(80, 74);
-            this.Valid.TabIndex = 12;
-            this.Valid.Text = "Пуск";
-            this.Valid.UseVisualStyleBackColor = true;
-            this.Valid.Click += new System.EventHandler(this.Valid_Click);
+            this.сканерToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.лексическийАнализаторToolStripMenuItem});
+            this.сканерToolStripMenuItem.Name = "сканерToolStripMenuItem";
+            this.сканерToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.сканерToolStripMenuItem.Text = "Сканер";
             // 
-            // automat
+            // лРToolStripMenuItem
             // 
-            this.automat.Location = new System.Drawing.Point(867, 44);
-            this.automat.Name = "automat";
-            this.automat.Size = new System.Drawing.Size(75, 74);
-            this.automat.TabIndex = 13;
-            this.automat.Text = "Автомат";
-            this.automat.UseVisualStyleBackColor = true;
-            this.automat.Click += new System.EventHandler(this.button1_Click);
+            this.лРToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.рВToolStripMenuItem,
+            this.автоматToolStripMenuItem});
+            this.лРToolStripMenuItem.Name = "лРToolStripMenuItem";
+            this.лРToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
+            this.лРToolStripMenuItem.Text = "ЛР";
+            // 
+            // рВToolStripMenuItem
+            // 
+            this.рВToolStripMenuItem.Name = "рВToolStripMenuItem";
+            this.рВToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.рВToolStripMenuItem.Text = "РВ";
+            this.рВToolStripMenuItem.Click += new System.EventHandler(this.Valid_Click);
+            // 
+            // автоматToolStripMenuItem
+            // 
+            this.автоматToolStripMenuItem.Name = "автоматToolStripMenuItem";
+            this.автоматToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.автоматToolStripMenuItem.Text = "Автомат";
+            this.автоматToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // лексическийАнализаторToolStripMenuItem
+            // 
+            this.лексическийАнализаторToolStripMenuItem.Name = "лексическийАнализаторToolStripMenuItem";
+            this.лексическийАнализаторToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.лексическийАнализаторToolStripMenuItem.Text = "Лексический анализатор";
+            this.лексическийАнализаторToolStripMenuItem.Click += new System.EventHandler(this.ЛексическийАнализаторToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1005, 715);
-            this.Controls.Add(this.automat);
-            this.Controls.Add(this.Valid);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.PasteBtn);
             this.Controls.Add(this.CutBtn);
@@ -495,8 +515,11 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Button Valid;
-        private System.Windows.Forms.Button automat;
+        private System.Windows.Forms.ToolStripMenuItem сканерToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem лРToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem рВToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem автоматToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem лексическийАнализаторToolStripMenuItem;
     }
 }
 

@@ -367,6 +367,7 @@ namespace tf9ik
                 for (int j = 0; j < splitedString.Length; j++)
                 {
                     var matches = new List<string>();
+                    var something = auto.checkEmail();
                     if(auto.checkEmail(splitedString[j]))
                     matches.Add(splitedString[j]);
                     foreach (var match in matches)
@@ -381,6 +382,11 @@ namespace tf9ik
 
 
             }
+
+        }
+
+        private void ЛексическийАнализаторToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
