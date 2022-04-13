@@ -8,13 +8,17 @@ namespace tf9ik
 {
     internal class Automat
     {
-        bool isLetter(char c) 
+        bool isLetter(char c)
         {
-            return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_' || c == '-';
+            return (c >= 'a' && c <= 'z');
         }
         bool isLetterOrNumber(char c)
         {
-            return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_' || c == '-' || (c >= '0' && c <= '9');
+            return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9');
+        }
+        bool isSeporator(char c)
+        {
+            return (c == '-' || c == '_' || c == '.');
         }
         bool isNumber(char c)
         {
@@ -41,14 +45,13 @@ namespace tf9ik
             q4,
             q5
         };
-        public List<(bool, string)> checkEmail(string word)
+        public string checkEmail(string word)
         {
-            List<(bool, string)> Total = new List<(bool, string)>();
+            string log = "";
             State state = State.q0;
             var c = word.ToArray();
             int end = c.Length;
             int i = 0;
-            string log = "";
             while(true)
             {
                 switch(state)
@@ -57,124 +60,104 @@ namespace tf9ik
                         if (isLetterOrNumber(c[i]))
                         {
                             state = State.q1;
+                            log += " q1";
                             i++;
-                            log += "q0 ";
                         }
                         else
                         {
                             log += "false";
-                            (bool, string) value = (false, log);
-                            Total.Add(value);
-                            return Total;
+                            return log;
                         }
                         break;
                     case State.q1:
                         if (isLetterOrNumber(c[i]))
                         {
                             state = State.q1;
+                            log += " q1";
                             i++;
-                            log += "q1 ";
                         }
-                        else if (isDot(c[i]))
+                        else if (isSeporator(c[i]))
                         {
                             state = State.q0;
+                            log += " q0";
                             i++;
-                            log += "q1 ";
                         }
                         else if (isAt(c[i]))
                         {
                             state = State.q2;
+                            log += " q2";
                             i++;
-                            log += "q1 ";
                         }
                         else
                         {
                             log += "false";
-                            (bool, string) value = (false, log);
-                            Total.Add(value);
-                            return Total;
+                            return log;
                         }
                         break;
                     case State.q2:
-                        //if (isDot(c[i]))
-                        //{
-                        //    state = State.q3;
-                        //    i++;
-                        //}
-                        /*else if*/ if (isLetterOrNumber(c[i]))
-                        {
+                        if (isLetterOrNumber(c[i])) 
+                        { 
                             state = State.q3;
-                            i++;
-                            log += "q2 ";
+                            log += " q3";
+                            i++; 
                         }
                         else
                         {
                             log += "false";
-                            (bool, string) value = (false, log);
-                            Total.Add(value);
-                            return Total;
+                            return log;
                         }
                         break;
                     case State.q3:
-                        if (isDot(c[i]))
-                        {
-                            state = State.q4;
-                            i++;
-                            log += "q3 ";
-                        }
-                        else if (isLetterOrNumber(c[i]))
+                        if (isLetterOrNumber(c[i]))
                         {
                             state = State.q3;
+                            log += " q3";
                             i++;
-                            log += "q3 ";
+                        }
+                        else if(isDot(c[i]))
+                        {
+                            state = State.q4;
+                            log += " q4";
+                            i++;
                         }
                         else
                         {
                             log += "false";
-                            (bool, string) value = (false, log);
-                            Total.Add(value);
-                            return Total;
+                            return log;
                         }
                         break;
                     case State.q4:
-                        if (isEnd(end, i))
+                        if (isLetter(c[i]) && isEnd(end, i))
                         {
                             state = State.q5;
-                            log += "q4 ";
+                            log += " q5";
+                            i++;
                         }
-                        else if (isLetter(c[i]))
+                        else if (isLetter(c[i]) || isDot(c[i])) 
                         {
                             state = State.q4;
+                            log += " q4";
                             i++;
-                            log += "q4 ";
                         }
-                        else if (isDot(c[i]))
+                        else if (isNumber(c[i]) || isDot(c[i]))
                         {
                             state = State.q3;
+                            log += " q3";
                             i++;
-                            log += "q4 ";
-                        }
-                        else if (isNumber(c[i]))// || isDot(c[i]))
-                        {
-                            state = State.q3;
-                            i++;
-                            log += "q4 ";
                         }
                         else
                         {
                             log += "false";
-                            (bool, string) value = (false, log);
-                            Total.Add(value);
-                            return Total;
+                            return log;
                         }
                         break;
                     case State.q5:
                         {
-                            log += "true";
-                            (bool, string) value = (true, log);
-                            Total.Add(value);
-                            return Total;
+                            log += " true";
+                            Console.WriteLine(log);
+                            return log;
                         }
+                        break;
                 }
             }
         }

@@ -367,14 +367,19 @@ namespace tf9ik
                 for (int j = 0; j < splitedString.Length; j++)
                 {
                     var matches = new List<string>();
-                    var something = auto.checkEmail();
-                    if(auto.checkEmail(splitedString[j]))
-                    matches.Add(splitedString[j]);
+                    var check = auto.checkEmail(splitedString[j]);
+                    var splited = check.Split(' ');
+                    if (splited[splited.Length - 1] == "true")
+                    {
+                        matches.Add(splitedString[j]);
+                    }
                     foreach (var match in matches)
                     {
                         ++count;
                         this.ResultWindow.Text += count + ". " + match;
                         this.ResultWindow.Text += " Строка: " + (i + 1);
+                        this.ResultWindow.Text += "\n";
+                        this.ResultWindow.Text += check;
                         this.ResultWindow.Text += "\n";
                     }
                 }
@@ -382,11 +387,6 @@ namespace tf9ik
 
 
             }
-
-        }
-
-        private void ЛексическийАнализаторToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
         }
     }
