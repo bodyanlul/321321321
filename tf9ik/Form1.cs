@@ -355,10 +355,10 @@ namespace tf9ik
                 return;
             }
             RichTextBox box = (RichTextBox)tabControl1.TabPages[tabControl1.SelectedIndex].Controls["textEnter"];
-            box.Enabled = false;
+            //box.Enabled = false;
             Automat auto = new Automat();
             char[] separators = new char[] { ' ', ',', ':', ';', '?', '/', '!' };
-            this.ResultWindow.Text = "Найденные email:\n";
+            //this.ResultWindow.Text = "Найденные email:\n";
             string[] text = box.Lines;
             int count = 0;
             for (int i = 0; i < text.Length; ++i)
@@ -369,10 +369,10 @@ namespace tf9ik
                     var matches = new List<string>();
                     var check = auto.checkEmail(splitedString[j]);
                     var splited = check.Split(' ');
-                    if (splited[splited.Length - 1] == "true")
-                    {
+                    //if (splited[splited.Length - 1] == "true")
+                    //{
                         matches.Add(splitedString[j]);
-                    }
+                    //}
                     foreach (var match in matches)
                     {
                         ++count;
@@ -388,6 +388,12 @@ namespace tf9ik
 
             }
 
+        }
+
+        private void АвтоматToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 form = new Form3();
+            form.Show();
         }
     }
 }

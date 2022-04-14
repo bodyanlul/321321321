@@ -60,3 +60,4 @@ C:\Users\bogdan\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.csproj.GenerateReso
 C:\Users\bogdan\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.csproj.CoreCompileInputs.cache
 C:\Users\bogdan\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.exe
 C:\Users\bogdan\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.pdb
+C:\Users\User.DESKTOP-Q2FT676\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.Form3.resources

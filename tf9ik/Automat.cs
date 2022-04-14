@@ -65,7 +65,7 @@ namespace tf9ik
                         }
                         else
                         {
-                            log += "false";
+                            log += " false";
                             return log;
                         }
                         break;
@@ -90,7 +90,7 @@ namespace tf9ik
                         }
                         else
                         {
-                            log += "false";
+                            log += " false";
                             return log;
                         }
                         break;
@@ -103,7 +103,7 @@ namespace tf9ik
                         }
                         else
                         {
-                            log += "false";
+                            log += " false";
                             return log;
                         }
                         break;
@@ -122,7 +122,7 @@ namespace tf9ik
                         }
                         else
                         {
-                            log += "false";
+                            log += " false";
                             return log;
                         }
                         break;
@@ -147,7 +147,7 @@ namespace tf9ik
                         }
                         else
                         {
-                            log += "false";
+                            log += " false";
                             return log;
                         }
                         break;
