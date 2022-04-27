@@ -355,10 +355,8 @@ namespace tf9ik
                 return;
             }
             RichTextBox box = (RichTextBox)tabControl1.TabPages[tabControl1.SelectedIndex].Controls["textEnter"];
-            //box.Enabled = false;
             Automat auto = new Automat();
             char[] separators = new char[] { ' ', ',', ':', ';', '?', '/', '!' };
-            //this.ResultWindow.Text = "Найденные email:\n";
             string[] text = box.Lines;
             int count = 0;
             for (int i = 0; i < text.Length; ++i)
@@ -369,10 +367,8 @@ namespace tf9ik
                     var matches = new List<string>();
                     var check = auto.checkEmail(splitedString[j]);
                     var splited = check.Split(' ');
-                    //if (splited[splited.Length - 1] == "true")
-                    //{
-                        matches.Add(splitedString[j]);
-                    //}
+                    matches.Add(splitedString[j]);
+                    
                     foreach (var match in matches)
                     {
                         ++count;
@@ -383,17 +379,40 @@ namespace tf9ik
                         this.ResultWindow.Text += "\n";
                     }
                 }
-
-
-
             }
-
         }
 
         private void АвтоматToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 form = new Form3();
             form.Show();
+        }
+
+        private void сканерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == -1)
+            {
+                return;
+            }
+            RichTextBox box = (RichTextBox)tabControl1.TabPages[tabControl1.SelectedIndex].Controls["textEnter"];
+            Scanner scanner = new Scanner();
+            List<ScanResult> scanResults = scanner.Scan(box.Text);
+            foreach (ScanResult scanResult in scanResults)
+            {   
+                
+                this.ResultWindow.Text += scanResult.ElementCode.ToString();
+                if (scanResult.ElementCode == 7)
+                {
+                    this.ResultWindow.Text += "\n";
+                }
+                
+            }
+        }
+
+        private void грамматикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
         }
     }
 }
