@@ -63,3 +63,5 @@ C:\Users\bogdan\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.pdb
 C:\Users\User.DESKTOP-Q2FT676\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.Form3.resources
 C:\Users\bogdan\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.Form3.resources
 C:\Users\bogdan\Desktop\321321321-main\tf9ik\obj\Debug\tf9ik.Form4.resources
+C:\Users\User.DESKTOP-Q2FT676\Desktop\tf9ik\obj\Debug\tf9ik.Form3.resources
+C:\Users\User.DESKTOP-Q2FT676\Desktop\tf9ik\obj\Debug\tf9ik.Form4.resources

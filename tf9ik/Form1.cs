@@ -55,6 +55,7 @@ namespace tf9ik
                      "Текстовые файлы (*.txt)|*.txt|All files (*.*)|*.*";
             saveFileDialog1.Filter =
                      "Текстовые файлы (*.txt)|*.txt|All files (*.*)|*.*";
+            ResultWindow.Font = new Font("Arial", 14);
         }
 
         private int PageNew(string namePage = "Новый файл")
@@ -296,7 +297,8 @@ namespace tf9ik
             MessageBox.Show("Текстовый редактор языкового процесса.\n\nРазработали студенты группы АВТ-913:" +
                 "\nВолков Богдан" +
                 "\nГорбунцов Леонид" +
-                "\nХафаев Максим");
+                "\nХафаев Максим"+
+                "\nПоливода Михаил");
         }
 
         private void ВызовСправкиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -394,16 +396,37 @@ namespace tf9ik
             {
                 return;
             }
+            this.ResultWindow.Text = "";
             RichTextBox box = (RichTextBox)tabControl1.TabPages[tabControl1.SelectedIndex].Controls["textEnter"];
             Scanner scanner = new Scanner();
             List<ScanResult> scanResults = scanner.Scan(box.Text);
             foreach (ScanResult scanResult in scanResults)
-            {   
-                
-                this.ResultWindow.Text += scanResult.ElementCode.ToString();
-                if (scanResult.ElementCode == 7)
+            {
+                if(scanResult.NumberString == 0)
                 {
+                    this.ResultWindow.Text += (scanResult.NumberString + 1).ToString() + ":" + (scanResult.Position - scanResult.PositionString+1).ToString();
+                    this.ResultWindow.Text += " ";
+                    this.ResultWindow.Text += scanResult.Value.ToString();
+                    this.ResultWindow.Text += " ";
+                    this.ResultWindow.Text += scanResult.ElementCode.ToString();
                     this.ResultWindow.Text += "\n";
+                    if (scanResult.ElementCode == 7)
+                    {
+                        this.ResultWindow.Text += "\n";
+                    }
+                }
+                else
+                {
+                    this.ResultWindow.Text += (scanResult.NumberString + 1).ToString() + ":" + (scanResult.Position - scanResult.PositionString).ToString();
+                    this.ResultWindow.Text += " ";
+                    this.ResultWindow.Text += scanResult.Value.ToString();
+                    this.ResultWindow.Text += " ";
+                    this.ResultWindow.Text += scanResult.ElementCode.ToString();
+                    this.ResultWindow.Text += "\n";
+                    if (scanResult.ElementCode == 7)
+                    {
+                        this.ResultWindow.Text += "\n";
+                    }
                 }
                 
             }
